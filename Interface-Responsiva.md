@@ -16,7 +16,9 @@ Nosso [Template Unity](https://github.com/SistemasGETE/UnityTemplate) já está 
   
 - [Main Camera](#main-camera)
   - [Configurando a Main Camera](#configurando-a-main-camera)
-  - [Posição Absoluta](#posiÃ§Ã£o-absoluta)
+  - [Keep Aspect Ratio](#keep-aspect-ratio)
+  
+- [Conclusão](#conclusão)
 
 ---
 

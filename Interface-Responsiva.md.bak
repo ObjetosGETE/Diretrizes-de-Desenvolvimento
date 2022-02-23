@@ -13,6 +13,10 @@ Nosso [Template Unity](https://github.com/SistemasGETE/UnityTemplate) já está 
 - [Aspect Ratio Fitter](#aspect-ratio-fitter)
   - [Configurando o Aspect Ratio Fitter](#configurando-o-aspect-ratio-fitter)
   - [Posição Absoluta](#posição-absoluta)
+  
+- [Main Camera](#main-camera)
+  - [Configurando a Main Camera](#configurando-a-main-camera)
+  - [Posição Absoluta](#posiÃ§Ã£o-absoluta)
 
 ---
 
@@ -22,7 +26,7 @@ Nosso [Template Unity](https://github.com/SistemasGETE/UnityTemplate) já está 
 
 O Canvas deve estar na raiz da cena, sendo o primeiro elemento da hierarquia. E Deve ser configurado da seguinte forma:
 
-![Canvas](/Imagens/Interface%20Responsiva/canvas.png)
+![Image](/Imagens/Interface%20Responsiva/canvas.png)
  
 
 `Render Mode` Configurar em "Screen Space – Camera" assim permite-se que o canvas se ajuste em tempo de execução ao aspect ratio da câmera, além de ser essencial para os nossos ajustes de acessibilidade. Todos os nosso projetos precisam dar suporte para diferentes tipos de daltonismo e a única forma de aplicarmos diferentes configurações de cores ao canvas é se ele for renderizado no mundo, em frente a câmera.
@@ -33,7 +37,7 @@ O Canvas deve estar na raiz da cena, sendo o primeiro elemento da hierarquia. E 
 
 As demais configurações são dependes do projeto e não serão discutidas nesse documento.
 ## Canvas Scaler
-![Canvas Scaler](/Imagens/Interface%20Responsiva/scaler.png)
+![Image](/Imagens/Interface%20Responsiva/scaler.png)
 
 Adicionar o `Canvas Scaler` ao mesmo objeto que contém o canvas, 1920x1080 é a nossa resolução padrão, é possível que algum de nossos projetos tenha outra resolução de referência, nesse caso o `Canvas Scaler` deve ser alterado para refletir a mudança.
 Definir o modo de escala como Screen Size e deixar o Match sempre em acordo com a largura.
@@ -84,7 +88,7 @@ O elemento de canvas completo, fica da seguinte forma:
 # Aspect Ratio Fitter
 
 ## Configurando o Aspect Ratio Fitter
-![Fitter](/Imagens/Interface%20Responsiva/fitter.png)
+![Image](/Imagens/Interface%20Responsiva/fitter.png)
 
 O Aspect Ration Fitter deve ser filho do Canvas e pai de todos os outros elementos da interface, ele que irá comprimir ou expandir seus elementos filhos para que eles encaixem no Aspect Ratio.
 
@@ -98,4 +102,68 @@ Colocar elementos na interface com posição absoluta é considerado uma péssim
 
 Porém, com nossa configuração conseguimos, sem medo, utilizar os elementos da UI em posição absoluta, desde que todos os elementos sejam filhos do Aspect Ratio Fitter
 
+# Main Camera
 
+## Configurando a Main Camera
+![Image](/Imagens/Interface%20Responsiva/maincamera.png)
+
+É importante que a Tag da Main Camera esteja definida como "MainCamera". É necessário adicionar o script "Keep Aspect Ratio" e preencher o campo "Target Aspect Ratio" com o mesmo valor inserido previamente no Aspect Ratio Fitter, que no nosso caso é 16/9 ou aproximadamente 1,777778.
+
+## Keep Aspect Ratio
+
+Script responsável por manter a resolução do usuário em um valor de aspect ratio pré definido (16/9), mesmo que a janela do browser mude dinamicamente de tamanho por ações do usuário. Esse script deve ser adicionado à Camera.
+```csharp
+using UnityEngine;
+
+public class KeepAspectRatio : MonoBehaviour
+{
+    //Por padrão vamos manter o aspect ratio em 16:9, caso algum projeto específico precise
+    // de outro aspect ratio, lembrar também de alterar nos elementos do canvas.
+    [SerializeField] private float _targetAspectRatio = 16f / 9.0f;
+    private Camera _myCamera;
+    private Rect _cameraRect;
+
+    private void Awake()
+    {
+        _myCamera = GetComponent<Camera>();
+        _cameraRect = _myCamera.rect;
+    }
+
+    private void Update()
+    {
+        // determine the game window's current aspect ratio
+        float windowaspect = (float)Screen.width / (float)Screen.height;
+
+        // current viewport height should be scaled by this amount
+        float scaleheight = windowaspect / _targetAspectRatio;
+
+        // if scaled height is less than current height, add letterbox
+        if (scaleheight < 1.0f)
+        {
+            _cameraRect.width = 1.0f;
+            _cameraRect.height = scaleheight;
+            _cameraRect.x = 0;
+            _cameraRect.y = (1.0f - scaleheight) / 2.0f;
+
+            _myCamera.rect = _cameraRect;
+        }
+        else // add pillarbox
+        {
+            float scalewidth = 1.0f / scaleheight;
+            
+            _cameraRect.width = scalewidth;
+            _cameraRect.height = 1.0f;
+            _cameraRect.x = (1.0f - scalewidth) / 2.0f;
+            _cameraRect.y = 0;
+
+            _myCamera.rect = _cameraRect;
+        }
+    }
+}
+```
+
+# Conclusão
+
+Ao final, teremos uma interface 100% responsiva tanto para navegadores desktop quanto para navegadores mobile.
+
+![Image](/Imagens/Interface%20Responsiva/responsividade.gif)
