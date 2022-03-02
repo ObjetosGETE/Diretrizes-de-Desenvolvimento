@@ -5,18 +5,21 @@ Aqui são descritas nossas diretrizes de programação, são boas práticas e or
 - [Geral](#geral)
   + [Sempre adicione modificadores de acesso explicitamente](#sempre-adicione-modificadores-de-acesso-explicitamente)
   + [Sempre mantenha os campos das classes como privados](#sempre-mantenha-os-campos-das-classes-como-privados)
-  + [Evite usar valores "hard-coded"](evite-usar-valores-"hard-coded")
-  + [Evite o uso das tags da Unity"](evite-o-uso-das-tags-da-Unity)  
+  + [Evite usar valores "hard-coded"](#evite-usar-valores-"hard-coded")
+  + [Evite o uso das tags da Unity"](#evite-o-uso-das-tags-da-Unity)  
   
-- [Convenções de Nomeclatura]()
-   + [Planilha de nomes]()
-   + [Sempre escreva o código em inglês]()
-   + [Sempre use palavras afirmativas para variáveis e funções booleanas]()
-   + [Evite abreviações]()
+- [Convenções de Nomeclatura](#convenções-de-nomeclatura)
+   + [Planilha de nomes](#planilha-de-nomes)
+   + [Sempre escreva o código em inglês](#sempre-escreva-o-código-em-inglês)
+   + [Sempre use palavras afirmativas para variáveis e funções booleanas](#sempre-use-palavras-afirmativas-para-variáveis-e-funções-booleanas)
+   + [Evite abreviações](#evite-abreviações)
    
-- [Organização dos scripts]()
-	+ [TO-DO]()
-	+ [TO-DO]()
+- [Organização dos scripts](#organização-dos-scripts)
+	+ [Ordem dos membros](#ordem-dos-membros)
+	+ [Ordem de acessibilidade](ordem-de-acessibilidade)
+	+ [Ordem dos métodos](ordem-dos-métodos)
+	+ [Declare apenas uma variável por linha](declare-apenas-uma-variável-por-linha)
+	+ [Nunca divida seu código em Regions](nunca-divida-seu-código-em-regions)
 
 ---
 # Geral
@@ -77,4 +80,29 @@ Ex:
 public class AquaticEnemyTag : MonoBehaviour
 ```
 
-WIP - Este documento está em construção.
+# Convenções de Nomeclatura
+
+## Planilha de nomes
+
+## Sempre escreva o código em inglês
+
+Inglês é o idioma internacional para código. Por uma questão de padronização, todo o nosso código será escrito em inglês.
+
+## Sempre use palavras afirmativas para variáveis e funções booleanas
+
+Usar palavras afirmativas evita confusões de interpretação ao ler e utilizar o código. Devemos por exemplo usar _isReady ao invés de _isNotReady.
+
+## Evite abreviações
+
+De preferência por utilizar os nomes completos ao invés de abreviações, isso deixa o código mais claro e legível.
+
+# Organização dos scripts
+
+##	Ordem dos membros
+## Ordem de acessibilidade
+## Ordem dos métodos
+## Declare apenas uma variável por linha
+## Nunca divida seu código em Regions
+
+
+
