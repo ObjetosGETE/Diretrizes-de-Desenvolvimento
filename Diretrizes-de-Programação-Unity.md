@@ -22,14 +22,6 @@ Aqui são descritas nossas diretrizes de programação, são boas práticas e or
 	+ [Nunca divida seu código em Regions](nunca-divida-seu-código-em-regions)
   - [Sempre coloque auto-properties na mesma linha](#sempre-coloque-auto-properties-na-mesma-linha)
   - [Considere o agrupamento de multiplos `for`, `foreach`, `using` e `while` statements](#considere-o-agrupamento-de-multiplos-for-foreach-using-e-while-statements)
-  - [Never use expression bodies on constructors and methods](#never-use-expression-bodies-on-constructors-and-methods)
-- [Assemblies and Namespaces](#assemblies-and-namespaces)
-- [Object Oriented Event-Driven Architecture (EDA)](#object-oriented-event-driven-architecture-eda)
-  - [Special naming](#special-naming)
-  - [About](#about)
-- [Unity Hybrid Entity Component System (ECS)](#unity-hybrid-entity-component-system-ecs)
-  - [Special naming](#special-naming-1)
-  - [About](#about-1)
 
 ---
 # Geral
@@ -94,7 +86,6 @@ public class AquaticEnemyTag : MonoBehaviour
 
 ## Planilha de nomes
 
->**Note:** when we use `noun` in the format, we refer to both nouns and noun phrases.
 
 | Identificadores | Casing | Formatação | Exemplos | Observações |
 | :--- | :--- | :--- | :--- | :--- |
@@ -169,20 +160,24 @@ A ordem dos métodos deve seguir a seguinte lista:
 
 
 ## Declare apenas uma variável por linha
-	Declarar apenas uma variável por linha é fundamental para o controle de versionamento, dessa forma quando você precisar editar ou adicionar uma variável, o git vai saber apontar melhor o que foi modificado, já que seu controle é feito através de linhas.
+
+Declarar apenas uma variável por linha é fundamental para o controle de versionamento, dessa forma quando você precisar editar ou adicionar uma variável, o git vai saber apontar melhor o que foi modificado, já que seu controle é feito através de linhas.
 
 ## Nunca divida seu código em Regions
-	Ter uma classe está grande o suficiente para que você considere dividi-la em regiões, é um forte sintoma de que ela está responsável por mais funções do que deveria, considere refatorar a classe e dividi-la em duas ou mais classes com menos responsabilidades.
+
+Ter uma classe está grande o suficiente para que você considere dividi-la em regiões, é um forte sintoma de que ela está responsável por mais funções do que deveria, considere refatorar a classe e dividi-la em duas ou mais classes com menos responsabilidades.
 	
 ## Sempre coloque auto-properties na mesma linha
-	Isso ajuda a facilmente diferenciar uma auto-propertie das demais properties.
+
+Isso ajuda a facilmente diferenciar uma auto-propertie das demais properties.
 
 ```c#
 public int MyProperty { get; set; }
 ```
 
 ## Considere o agrupamento de multiplos `for`, `foreach`, `using` e `while` statements
-	Considere agrupar as declarações do mesmo tipo quando elas compartilharem com exatidão a mesma lógica.
+
+Considere agrupar as declarações do mesmo tipo quando elas compartilharem com exatidão a mesma lógica.
 	
 	```c#
 foreach (int x in Lines)
