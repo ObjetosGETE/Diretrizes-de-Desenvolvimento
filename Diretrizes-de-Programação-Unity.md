@@ -20,6 +20,16 @@ Aqui são descritas nossas diretrizes de programação, são boas práticas e or
 	+ [Ordem dos métodos](ordem-dos-métodos)
 	+ [Declare apenas uma variável por linha](declare-apenas-uma-variável-por-linha)
 	+ [Nunca divida seu código em Regions](nunca-divida-seu-código-em-regions)
+  - [Sempre coloque auto-properties na mesma linha](#sempre-coloque-auto-properties-na-mesma-linha)
+  - [Considere o agrupamento de multiplos `for`, `foreach`, `using` e `while` statements](#considere-o-agrupamento-de-multiplos-for-foreach-using-e-while-statements)
+  - [Never use expression bodies on constructors and methods](#never-use-expression-bodies-on-constructors-and-methods)
+- [Assemblies and Namespaces](#assemblies-and-namespaces)
+- [Object Oriented Event-Driven Architecture (EDA)](#object-oriented-event-driven-architecture-eda)
+  - [Special naming](#special-naming)
+  - [About](#about)
+- [Unity Hybrid Entity Component System (ECS)](#unity-hybrid-entity-component-system-ecs)
+  - [Special naming](#special-naming-1)
+  - [About](#about-1)
 
 ---
 # Geral
@@ -84,6 +94,27 @@ public class AquaticEnemyTag : MonoBehaviour
 
 ## Planilha de nomes
 
+>**Note:** when we use `noun` in the format, we refer to both nouns and noun phrases.
+
+| Identificadores | Casing | Formatação | Exemplos | Observações |
+| :--- | :--- | :--- | :--- | :--- |
+| Class<br/> Struct<br/> Property<br/> Constants<br/> Readonly | PascalCase | {Nome} | `Player`<br/> `AIState`<br/> `PlayerController`<br/> `DefaultSpeed`<br/> `InitialSpeed` 
+| Abstract Class | PascalCase | {Nome}Base | `CharacterBase` | - |
+| Tests Class | PascalCase | {Tipo}Tests | `PlayerTests`<br/>`PrefabUtilityTests` | Dado o exemplo, é esperado que exista no projeto uma classe chamada `Player` e uma classe chamada `PrefabUtility`. |
+| Extenções de Classes | PascalCase | {Tipo}Extensions | `TransformExtensions`<br/>`RigidbodyExtensions` | - |
+| Delegates | PascalCase | {[NomeDoEvento]}`Handler` | `ButtonClickHandler` | - |
+| Enums | PascalCase | {Nome} | `GameMode`<br/> `DisplayOptions` | |
+| Interfaces | PascalCase | `I`{Adjetivo}<br/> `I`{[NomeDoEvento]}`Handler` | `IDamageable`<br/> `IDamageTakenHandler` | - |
+| Argumentos Genéricos | PascalCase | `T`<br/> `T`{Nome}<br/> | `List<T>`<br/> `Dictionary<TKey, TValue>` | Se há apenas um argumento, use `T` como o nome. |
+| C# event<br/> Método para invocar um evento | PascalCase | `On`{[NomeDoEvento]} | `OnButtonClick`<br/> `OnButtonClick()` |  |
+| Método para escutar um evento | PascalCase | `Handle`{[NomeDoEvento]} | `HandleButtonClick()` | Esses métodos estão diretamente ligados à execução de um evento. |
+| Método | PascalCase | {Ação} | `Jump()` | - |
+| Métodos Assincronos | PascalCase | {Ação}`Async` | `DownloadFileAsync()` | - |
+| Métodos de Corrotina | PascalCase | {Ação}`Coroutine` | `DownloadFileCoroutine()` | - |
+| Campos públicos<br/> Campos constantes<br/>Campos somente leitura | PascalCase | {Nome} | `SpeedRange` | Apenas structs devem ter campos não-privados que não são constantes ou somente leitura. |
+| Campos privados | camelCase | `_`{nome} | `_speedRange` | - |
+| Parâmetros<br/> Variáveis locais | camelCase | {nome} | `speedRange` | - |
+
 ## Sempre escreva o código em inglês
 
 Inglês é o idioma internacional para código. Por uma questão de padronização, todo o nosso código será escrito em inglês.
@@ -100,9 +131,79 @@ De preferência por utilizar os nomes completos ao invés de abreviações, isso
 
 ##	Ordem dos membros
 ## Ordem de acessibilidade
-## Ordem dos métodos
-## Declare apenas uma variável por linha
-## Nunca divida seu código em Regions
 
+Quanto mais exposto é o membro, maior a sua prioridade.
+
+- `public`
+- `internal`
+- `protected internal`
+- `protected`
+- `private protected`
+- `private`
+ 
+## Ordem dos métodos
+
+A ordem dos métodos deve seguir a seguinte lista:
+
+- Unity callbacks
+  - `Reset` then `OnValidate`
+  - Reset()
+  - OnValidate()
+  - Awake()
+  - OnEnable()
+  - Start()
+  - OnDisable()
+  - OnDestroy()
+  - FixedUpdate()
+  - Update()
+  - LateUpdate()
+  - OnTriggerEnter()
+  - OnTriggerStay()
+  - OnTriggerExit()
+  - OnCollisionEnter()
+  - OnCollisionStay()
+  - OnColissionExit()
+  - Demais callbacks da Unity.
+  - Métodos com atributos da Unity como RuntimeInitializeOnLoadMethod()
+  - Outros métodos.
+
+
+## Declare apenas uma variável por linha
+	Declarar apenas uma variável por linha é fundamental para o controle de versionamento, dessa forma quando você precisar editar ou adicionar uma variável, o git vai saber apontar melhor o que foi modificado, já que seu controle é feito através de linhas.
+
+## Nunca divida seu código em Regions
+	Ter uma classe está grande o suficiente para que você considere dividi-la em regiões, é um forte sintoma de que ela está responsável por mais funções do que deveria, considere refatorar a classe e dividi-la em duas ou mais classes com menos responsabilidades.
+	
+## Sempre coloque auto-properties na mesma linha
+	Isso ajuda a facilmente diferenciar uma auto-propertie das demais properties.
+
+```c#
+public int MyProperty { get; set; }
+```
+
+## Considere o agrupamento de multiplos `for`, `foreach`, `using` e `while` statements
+	Considere agrupar as declarações do mesmo tipo quando elas compartilharem com exatidão a mesma lógica.
+	
+	```c#
+foreach (int x in Lines)
+foreach (int y in Columns)
+{
+    using (var xReader = new StreamReader($"{x}.txt"))
+    using (var yReader = new StreamReader($"{y}.txt"))
+    {
+        string xLine = xReader.ReadLine();
+        string yLine = yReader.ReadLine();
+
+        while (xLine != null && yLine != null) 
+        {
+            print($"{xLine} - {yLine}");
+
+            xLine = xReader.ReadLine();
+            yLine = yReader.ReadLine();
+        }
+    }
+}
+
+```
 
 
