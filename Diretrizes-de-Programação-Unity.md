@@ -136,7 +136,6 @@ Quanto mais exposto é o membro, maior a sua prioridade.
 A ordem dos métodos deve seguir a seguinte lista:
 
 - Unity callbacks
-  - `Reset` then `OnValidate`
   - Reset()
   - OnValidate()
   - Awake()
