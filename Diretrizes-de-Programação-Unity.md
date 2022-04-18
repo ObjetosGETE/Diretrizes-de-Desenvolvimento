@@ -120,7 +120,6 @@ De preferência por utilizar os nomes completos ao invés de abreviações, isso
 
 # Organização dos scripts
 
-##	Ordem dos membros
 ## Ordem de acessibilidade
 
 Quanto mais exposto é o membro, maior a sua prioridade.
@@ -179,7 +178,7 @@ public int MyProperty { get; set; }
 
 Considere agrupar as declarações do mesmo tipo quando elas compartilharem com exatidão a mesma lógica.
 	
-	```c#
+```c#
 foreach (int x in Lines)
 foreach (int y in Columns)
 {
@@ -197,8 +196,5 @@ foreach (int y in Columns)
             yLine = yReader.ReadLine();
         }
     }
-}
-
-```
-
+}```
 
