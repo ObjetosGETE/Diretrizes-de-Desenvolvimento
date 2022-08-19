@@ -73,8 +73,9 @@ Durante o briefing e a definição do projeto, caso seja mencionado que é neces
 
 ## Como fazer
 Para realizar o print da tela, estaremos montando um script no index.html que utiliza a CDN html2canvas.min.js, chamando este método em uma .jslib e então registrando este método como uma DLL dentro da unity através de um .cs
+
   * Documentação da Unity de como chamar scripts de uma .jslib para dentro de um .cs: https://docs.unity3d.com/Manual/webgl-interactingwithbrowserscripting.html
-  * CDN Html2Canvas: https://html2canvas.hertzen.com/
+  * Html2Canvas: [https://html2canvas.hertzen.com/](https://github.com/niklasvh/html2canvas)
   * Após compilar a build, é necessário realizar uma alteração "no BuildLoader.js", sendo este um código minificado. Neste arquivo alteramos a variável "preserveDrawingBuffer:!1" para "preserveDrawingBuffer:1". Desta forma, desativamos a limpeza automática do buffer de rendering, permitindo que as imagens não saiam pretas no canvas. Por causa desta alterações que ocorrem os problemas de performance mencionados anteriormente.
 
 Para exemplos, podemos utilizar o projeto "Crescendo com Saúde - Monte seu prato" para visualizar como é feita esta funcionalidade: https://github.com/ObjetosGETE/CCS-Monte-Seu-Prato | https://senacrs365.sharepoint.com/:u:/s/FS-GETE-MATERIAIS/EbiL0o_gFNFDvelBzv2o6VcBeH7IASHR2QTKIItYKkalWQ?e=gRWipZ
