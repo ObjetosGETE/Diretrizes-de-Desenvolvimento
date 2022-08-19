@@ -7,11 +7,11 @@ Este documento descreve orientações gerais para todos os envolvidos no projeto
   - [Sempre informe as entregas pelo grupo de e-mail](#sempre-informe-as-entregas-pelo-grupo-de-e-mail)
 - [Discord](#discord)
   - [Sempre use o grupo do projeto para discutir sobre o projeto](#sempre-use-o-grupo-do-projeto-para-discutir-sobre-o-projeto)
-  - [Grupos específicos](#grupos-espcificos)
+  - [Grupos específicos](#grupos-especificos)
 - [SharePoint](#sharepoint)
-- [Printscreen WebGL] (#printscreen-webgl)
-  - [Cuidados] (#cuidados)
-  - [Como fazer] (#como-fazer)
+- [Printscreen WebGL](#printscreen-webgl)
+  - [Cuidados](#cuidados)
+  - [Como fazer](#como-fazer)
 
 ---
 
@@ -31,7 +31,7 @@ Objetos-Gete é o nosso servidor oficial no discord. Observe atentamente a estru
 
 Informações específicas sobre projetos devem ficar no canal do projeto, dessa forma mantemos um histórico do nosso processo de desenvolvimento, que nos ajudará em projetos futuros.
 
-## Grupos específicos
+## Grupos especificos
 
 Dentro do servidor cada projeto possuiu um grupo de canais dedicados, a estrutura dos canais será sempre algo semelhante a lista abaixo:
 
@@ -64,7 +64,7 @@ Um projeto que existe no Github, deverá ser upado no sharepoint após ser final
 
 Quando precisar compartilhar produções com o restante do time, de preferência por upa-lo no sharepoint e distribuir o link no discord.
 
-# Printscreen WEBGL
+# Printscreen WebGL
 
 ## Cuidados
 Durante o briefing e a definição do projeto, caso seja mencionado que é necessário salvar prints da tela, é de suma importância levantar as seguintes questões:
