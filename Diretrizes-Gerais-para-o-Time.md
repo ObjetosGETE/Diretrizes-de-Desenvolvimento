@@ -35,7 +35,7 @@ Informações específicas sobre projetos devem ficar no canal do projeto, dessa
 
 Dentro do servidor cada projeto possuiu um grupo de canais dedicados, a estrutura dos canais será sempre algo semelhante a lista abaixo:
 
-* Docuentação
+* Documentação
 * Game Design
 * Arte-3D
 * Desenvolvimento
