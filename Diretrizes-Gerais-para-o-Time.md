@@ -9,6 +9,9 @@ Este documento descreve orientações gerais para todos os envolvidos no projeto
   - [Sempre use o grupo do projeto para discutir sobre o projeto](#sempre-use-o-grupo-do-projeto-para-discutir-sobre-o-projeto)
   - [Grupos específicos](#grupos-espcificos)
 - [SharePoint](#sharepoint)
+- [Printscreen WebGL] (#printscreen-webgl)
+  - [Cuidados] (#cuidados)
+  - [Como fazer] (#como-fazer)
 
 ---
 
@@ -60,6 +63,21 @@ Durante o desenvolvimento de projetos usaremos diferentes ferramentas para compa
 Um projeto que existe no Github, deverá ser upado no sharepoint após ser finalizado. Concepts de arte, modelos finalizados, ícones e demais produções artísticas também devem estar no Sharepoint.
 
 Quando precisar compartilhar produções com o restante do time, de preferência por upa-lo no sharepoint e distribuir o link no discord.
+
+# Printscreen WEBGL
+
+## Cuidados
+Durante o briefing e a definição do projeto, caso seja mencionado que é necessário salvar prints da tela, é de suma importância levantar as seguintes questões:
+• Certificar-se de que o jogo será 2D. Há muita perda de performance em WebGL para permitir que a print seja feita;
+• Caso o jogo seja 2D a build exceda ~60mb, questionar a real necessidade da mecânica pelas mesmas questões performáticas.
+
+## Como fazer
+Para realizar o print da tela, estaremos montando um script no index.html que utiliza a CDN html2canvas.min.js, chamando este método em uma .jslib e então registrando este método como uma DLL dentro da unity através de um .cs
+  * Documentação da Unity de como chamar scripts de uma .jslib para dentro de um .cs: https://docs.unity3d.com/Manual/webgl-interactingwithbrowserscripting.html
+  * CDN Html2Canvas: https://html2canvas.hertzen.com/
+  * Após compilar a build, é necessário realizar uma alteração "no BuildLoader.js", sendo este um código minificado. Neste arquivo alteramos a variável "preserveDrawingBuffer:!1" para "preserveDrawingBuffer:1". Desta forma, desativamos a limpeza automática do buffer de rendering, permitindo que as imagens não saiam pretas no canvas. Por causa desta alterações que ocorrem os problemas de performance mencionados anteriormente.
+
+Para exemplos, podemos utilizar o projeto "Crescendo com Saúde - Monte seu prato" para visualizar como é feita esta funcionalidade: https://github.com/ObjetosGETE/CCS-Monte-Seu-Prato | https://senacrs365.sharepoint.com/:u:/s/FS-GETE-MATERIAIS/EbiL0o_gFNFDvelBzv2o6VcBeH7IASHR2QTKIItYKkalWQ?e=gRWipZ
 
 
 <h3>WIP - Este documento está em construção</h3>
