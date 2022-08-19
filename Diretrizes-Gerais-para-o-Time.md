@@ -68,8 +68,8 @@ Quando precisar compartilhar produções com o restante do time, de preferência
 
 ## Cuidados
 Durante o briefing e a definição do projeto, caso seja mencionado que é necessário salvar prints da tela, é de suma importância levantar as seguintes questões:
-• Certificar-se de que o jogo será 2D. Há muita perda de performance em WebGL para permitir que a print seja feita;
-• Caso o jogo seja 2D a build exceda ~60mb, questionar a real necessidade da mecânica pelas mesmas questões performáticas.
+* Certificar-se de que o jogo será 2D. Há muita perda de performance em WebGL para permitir que a print seja feita;
+* Caso o jogo seja 2D a build exceda ~60mb, questionar a real necessidade da mecânica pelas mesmas questões performáticas.
 
 ## Como fazer
 Para realizar o print da tela, estaremos montando um script no index.html que utiliza a CDN html2canvas.min.js, chamando este método em uma .jslib e então registrando este método como uma DLL dentro da unity através de um .cs
