@@ -27,7 +27,7 @@ Aqui são descritas nossas diretrizes de programação, são boas práticas e or
 	+ [Drag and Drop](#drag-and-drop)
 	+ [Drag and Drop script](#drag-and-drop-script)
 	+ [Slot script](#slot-script)
-	+ [Como usar](#como-usar-drag-and-drop]
+	+ [Como usar](#como-usar--drag-and-drop-]
 
 ---
 # Geral
@@ -213,6 +213,6 @@ Teste
 
 Teste
 
-## Como usar (Drag and drop)
+## Como usar "Drag and drop"
 
 Teste
