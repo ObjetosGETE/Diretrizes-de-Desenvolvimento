@@ -25,9 +25,9 @@ Aqui são descritas nossas diretrizes de programação, são boas práticas e or
 
 - [Assets utilizados no cotidiano desenvolvidos pela equipe](#assets)
 	+ [Drag and Drop](#drag-and-drop)
-		+[Drag and Drop script](#drag-and-drop-script)
-		+[Slot script](#slot-script)
-		+[Como usar](#como-usar-drag-and-drop]
+	+[Drag and Drop script](#drag-and-drop-script)
+	+[Slot script](#slot-script)
+	+[Como usar](#como-usar-drag-and-drop]
 
 ---
 # Geral
