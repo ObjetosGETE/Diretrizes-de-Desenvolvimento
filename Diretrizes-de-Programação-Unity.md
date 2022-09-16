@@ -207,17 +207,19 @@ foreach (int y in Columns)
 
 # Assets
 ## Coletânea de scripts Drag and Drop
-[Clique aqui](https://gist.github.com/ObjetosSenac/606b8a146d05cea9afc16542761ffbcf) para acessar o script de Drag and Drop
+[Clique aqui](https://gist.github.com/ObjetosSenac/606b8a146d05cea9afc16542761ffbcf) para acessar a coletânea de scripts de Drag and Drop
 
 ### Drag Controller Script
-Teste
+[Clique aqui](https://gist.github.com/ObjetosSenac/606b8a146d05cea9afc16542761ffbcf#file-dragcontroller-cs)
 
 ### Draggable Script
-Teste
+[Clique aqui](https://gist.github.com/ObjetosSenac/606b8a146d05cea9afc16542761ffbcf#file-draggable-cs)
+
+### Slot Script
+[Clique aqui](https://gist.github.com/ObjetosSenac/606b8a146d05cea9afc16542761ffbcf#file-slot-cs)
 
 ### Layer Script
-Teste
-
+[Clique aqui](https://gist.github.com/ObjetosSenac/606b8a146d05cea9afc16542761ffbcf#file-layer-cs)
 
 ### Configuração Drag And Drop
 
