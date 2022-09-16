@@ -27,7 +27,7 @@ Aqui são descritas nossas diretrizes de programação, são boas práticas e or
 	+ [Drag and Drop](#drag-and-drop)
 	+ [Drag and Drop script](#drag-and-drop-script)
 	+ [Slot script](#slot-script)
-	+ [
+	+ [Configuração Drag And Drop](#configuração-drag-and-drop)
 
 ---
 # Geral
