@@ -25,9 +25,9 @@ Aqui são descritas nossas diretrizes de programação, são boas práticas e or
 
 - [Assets utilizados no cotidiano desenvolvidos pela equipe](#assets)
 	+ [Drag and Drop](#drag-and-drop)
-	+ [Drag and Drop script](##drag-and-drop-script)
-	+ [Slot script](##slot-script)
-	+ [Configuração Drag And Drop](##configuração-drag-and-drop)
+	+ [Drag Controller Script](#drag-controller-script)
+	+ [Layer Script](#layer-script)
+	+ [Configuração Drag And Drop](#configuração-drag-and-drop)
 
 ---
 # Geral
@@ -206,13 +206,18 @@ foreach (int y in Columns)
 
 
 # Assets
-### Drag and drop Script
+## Drag and drop Script
+[Clique aqui](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) para acessar o script de Drag and Drop
 
+### Drag Controller Script
 Teste
 
-### Slot Script
-
+### Draggable Script
 Teste
+
+### Layer Script
+Teste
+
 
 ### Configuração Drag And Drop
 
