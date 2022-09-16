@@ -25,9 +25,9 @@ Aqui são descritas nossas diretrizes de programação, são boas práticas e or
 
 - [Assets utilizados no cotidiano desenvolvidos pela equipe](#assets)
 	+ [Drag and Drop](#drag-and-drop)
-	++ [Drag Controller Script](#drag-controller-script)
-	++ [Layer Script](#layer-script)
-	++ [Configuração Drag And Drop](#configuração-drag-and-drop)
+		+ [Drag Controller Script](#drag-controller-script)
+		+ [Layer Script](#layer-script)
+		+ [Configuração Drag And Drop](#configuração-drag-and-drop)
 
 ---
 # Geral
