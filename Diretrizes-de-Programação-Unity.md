@@ -24,7 +24,7 @@ Aqui são descritas nossas diretrizes de programação, são boas práticas e or
   - [Considere o agrupamento de multiplos `for`, `foreach`, `using` e `while` statements](#considere-o-agrupamento-de-multiplos-for-foreach-using-e-while-statements)
 
 - [Assets utilizados no cotidiano desenvolvidos pela equipe](#assets)
-	+ [Drag and Drop](#drag-and-drop)
+	+ [Coletânea de scripts Drag and Drop](#coletânea-de-scripts-drag-and-drop)
 		+ [Drag Controller Script](#drag-controller-script)
 		+ [Layer Script](#layer-script)
 		+ [Configuração Drag And Drop](#configuração-drag-and-drop)
@@ -206,8 +206,8 @@ foreach (int y in Columns)
 
 
 # Assets
-## Drag and drop Script
-[Clique aqui](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) para acessar o script de Drag and Drop
+## Coletânea de scripts Drag and Drop
+[Clique aqui]([https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax](https://gist.github.com/ObjetosSenac/606b8a146d05cea9afc16542761ffbcf)) para acessar o script de Drag and Drop
 
 ### Drag Controller Script
 Teste
