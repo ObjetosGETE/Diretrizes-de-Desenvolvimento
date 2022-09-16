@@ -207,7 +207,7 @@ foreach (int y in Columns)
 
 # Assets
 ## Coletânea de scripts Drag and Drop
-[Clique aqui]([https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax](https://gist.github.com/ObjetosSenac/606b8a146d05cea9afc16542761ffbcf)) para acessar o script de Drag and Drop
+[Clique aqui](https://gist.github.com/ObjetosSenac/606b8a146d05cea9afc16542761ffbcf) para acessar o script de Drag and Drop
 
 ### Drag Controller Script
 Teste
