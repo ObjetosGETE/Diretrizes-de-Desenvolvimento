@@ -207,13 +207,17 @@ foreach (int y in Columns)
 
 # Assets
 ## Coletânea de scripts Drag and Drop
+Utilizado para a criação de objetos que utilizem da mecânica de clicar e arrastar objetos para posições específicas na tela, com objetivo de completar quebra-cabeças e afins. Compatível com GameObjects em geral, como scriptable objects,prefabs e prefabs variants. 
 [Clique aqui](https://gist.github.com/ObjetosSenac/606b8a146d05cea9afc16542761ffbcf) para acessar a coletânea de scripts de Drag and Drop
 
 ### Drag Controller Script
 [Clique aqui](https://gist.github.com/ObjetosSenac/606b8a146d05cea9afc16542761ffbcf#file-dragcontroller-cs)
+• Crie um GameObject vazio em cena e anexe o script acima. Este será o script responsável por entender qual objeto foi clicado, seu atual estado (se foi encaixado ou ainda pode ser arrastado) e o que deve acontecer ao soltar o objeto.
 
 ### Draggable Script
 [Clique aqui](https://gist.github.com/ObjetosSenac/606b8a146d05cea9afc16542761ffbcf#file-draggable-cs)
+• Anexe este script ao objeto que você deseja clicar e arrastar.
+• Para que seja possível clicar e arrastar, é necessário adicionar os componentes "RigidBody 2D" configurado como Kinematic e um "2D Collider" de sua preferência e que interaja com Raycasts.
 
 ### Slot Script
 [Clique aqui](https://gist.github.com/ObjetosSenac/606b8a146d05cea9afc16542761ffbcf#file-slot-cs)
