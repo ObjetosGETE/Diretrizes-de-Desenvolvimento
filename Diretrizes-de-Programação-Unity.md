@@ -27,7 +27,7 @@ Aqui são descritas nossas diretrizes de programação, são boas práticas e or
 	+ [Drag and Drop](#drag-and-drop)
 	+ [Drag and Drop script](#drag-and-drop-script)
 	+ [Slot script](#slot-script)
-	+ [Como usar drag and drop](#como-usar-drag-and-drop]
+	+ [
 
 ---
 # Geral
@@ -205,7 +205,7 @@ foreach (int y in Columns)
 
 
 # Assets
-## Drag and drop
+## Drag and drop Script
 
 Teste
 
@@ -213,6 +213,6 @@ Teste
 
 Teste
 
-## Como usar drag and drop
+## Configuração Drag And Drop
 
 Teste
