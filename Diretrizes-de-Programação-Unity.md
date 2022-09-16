@@ -23,6 +23,12 @@ Aqui são descritas nossas diretrizes de programação, são boas práticas e or
   - [Sempre coloque auto-properties na mesma linha](#sempre-coloque-auto-properties-na-mesma-linha)
   - [Considere o agrupamento de multiplos `for`, `foreach`, `using` e `while` statements](#considere-o-agrupamento-de-multiplos-for-foreach-using-e-while-statements)
 
+- [Assets utilizados no cotidiano desenvolvidos pela equipe](#assets)
+	+ [Drag and Drop](#drag-and-drop)
+		+[Drag and Drop script](#drag-and-drop-script)
+		+[Slot script](#slot-script)
+		+[Como usar](#como-usar-drag-and-drop]
+
 ---
 # Geral
 
@@ -197,3 +203,11 @@ foreach (int y in Columns)
     }
 }```
 
+
+# Assets
+## Drag and drop
+	Teste
+## Slot Script
+	Teste
+## Como usar (Drag and drop)
+	Teste
