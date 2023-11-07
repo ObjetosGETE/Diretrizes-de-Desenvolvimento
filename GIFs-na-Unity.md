@@ -3,14 +3,16 @@
 Procedimento para facilmente inserir GIFs dentro de objetos produzidos pela Unity.
 
 ---
-#Transformar o GIF em um PNG contendo todos os frames através do site https://tool.koalahollow.com/gifconverter
----
-##Acessar o site e realizar o upload do GIF desejado.
 
-##Selecionar o formato "PNG" e o tipo em grade, para que o resultado seja como a imagem abaixo.
+1) Transformar o GIF em um PNG contendo todos os frames através do site https://tool.koalahollow.com/gifconverter
 
-![alt text](https://img.freepik.com/psd-gratuitas/ilustracao-de-renderizacao-3d-isolada-do-icone-do-google_47987-9777.jpg?w=2000)
-  - Renomear como desejar e realizar o download.
+- Acessar o site e realizar o upload do GIF desejado.
+
+- Selecionar o formato "PNG" e o tipo em grade, para que o resultado seja como a imagem abaixo.
+
+<img src="Imagens/GIFs/gifs-grid-example.png" alt="drawing" width="500"/>
+
+- Renomear como desejar e realizar o download.
 2) Dentro da Unity, separar os frames.
   - Importe o PNG resultante da última etapa para dentro da Unity.
   - Escolha o formato da imagem como "Sprite (2D and UI)" e na nova opção "Sprite Mode" selecione "Multiple".
