@@ -1,10 +1,14 @@
-GIFs
+<h1>GIFs dentro da Unity</h1>
 
-Como colocar GIFs dentro da Unity?
+Procedimento para facilmente inserir GIFs dentro de objetos produzidos pela Unity.
 
-1) Transformar o GIF em um PNG contendo todos os frames através do site https://tool.koalahollow.com/gifconverter
-  - Acessar o site e realizar o upload do GIF desejado.
-  - Selecionar o formato "PNG" e o tipo em grade, para que o resultado seja como a imagem abaixo.
+---
+#Transformar o GIF em um PNG contendo todos os frames através do site https://tool.koalahollow.com/gifconverter
+---
+##Acessar o site e realizar o upload do GIF desejado.
+
+##Selecionar o formato "PNG" e o tipo em grade, para que o resultado seja como a imagem abaixo.
+
 ![alt text](https://img.freepik.com/psd-gratuitas/ilustracao-de-renderizacao-3d-isolada-do-icone-do-google_47987-9777.jpg?w=2000)
   - Renomear como desejar e realizar o download.
 2) Dentro da Unity, separar os frames.
