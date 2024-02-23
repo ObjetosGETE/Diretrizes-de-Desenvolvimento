@@ -40,6 +40,6 @@ Neste documento estaremos detalhando como transferir a licença entre usuários 
 
 <img src="Imagens/Licenca Unity/I9.png" alt="drawing" width="500"/>
 
-- Sua licença PRO deve estar, para se certificar basta verificar sua tela de licenças.
+- Sua licença PRO deve estar habilitada, para se certificar basta verificar sua tela de licenças.
 
 <img src="Imagens/Licenca Unity/I10.png" alt="drawing" width="500"/>
